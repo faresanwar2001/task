@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: green;
+}
+
+main {
+  width: 25%;
+  background-color: white;
+  border-radius: 0.6rem;
+}
+
+/* Main */
+.main-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  padding: 3rem;
+}
+
+/* Form heading */
+.form-heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form .email-input,
+form .password-input {
+  padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+  position: relative;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.1rem;
+  background-color: rgba(145, 143, 143, 0.432);
+}
+
+::placeholder {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.email-field,
+.password-field {
+  position: relative;
+}
+
+.email-field .email-icon,
+.password-field .password-icon {
+  z-index: 9999;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.6rem;
+  color: gray;
+  font-size: 1.3rem;
+}
+
+.remember-section {
+  margin: 2rem 0;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  color: rgb(85, 85, 85);
+}
+
+.remember-section input {
+  display: none;
+}
+
+.remember-section .check-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid pink;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.remember-section input:checked + .check-box {
+  border-color: pink;
+}
+
+.remember-section .check-box::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.remember-section input:checked + .check-box::after {
+  display: block;
+}
+
+button {
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  position: relative;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.1rem;
+  background-color: rgb(212 64 142);
+  font-weight: 900;
+  color: white;
+}
+
+.options-login {
+  margin: 2rem 0;
+}
+
+.heading-options {
+  text-align: center;
+  color: rgb(85, 85, 85);
+}
+
+.icons-social {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.6rem;
+}
+
+.icons-social span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid gray;
+  border-radius: 0.2rem;
+  margin-top: 1.3rem;
+}
+
+.form-footer {
+  padding-top: 1.3rem;
+  text-align: center;
+  color: rgb(85, 85, 85);
+}
+
+.form-footer span {
+  text-decoration: underline;
+}
